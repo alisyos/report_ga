@@ -154,7 +154,7 @@ export default function ConversionCardPage() {
                 {format(startDate, 'PPP', { locale: ko })} ~ {format(endDate, 'PPP', { locale: ko })}
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
+            <PopoverContent className="w-auto p-0 bg-white dark:bg-gray-800 shadow-lg border" align="start">
               <Calendar
                 mode="range"
                 selected={{
@@ -167,8 +167,9 @@ export default function ConversionCardPage() {
                 }}
                 locale={ko}
                 disabled={{ after: new Date() }}
+                className="bg-white dark:bg-gray-800 rounded-md shadow"
               />
-              <div className="p-3 border-t border-border flex justify-end gap-2">
+              <div className="p-3 border-t border-border flex justify-end gap-2 bg-white dark:bg-gray-800">
                 <Button variant="outline" onClick={() => setIsCalendarOpen(false)}>
                   취소
                 </Button>
