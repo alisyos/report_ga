@@ -1,9 +1,28 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <div className="w-full flex flex-col items-center">
+          <h1 className="text-4xl font-bold mb-6">Google Analytics 리포트</h1>
+          <p className="text-lg mb-8 text-center max-w-2xl">
+            구글 애널리틱스 API를 활용하여 웹사이트 트래픽과 사용자 행동 데이터를 시각화한 대시보드입니다.
+          </p>
+          
+          <Link 
+            href="/analytics"
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-blue-600 text-white gap-2 hover:bg-blue-700 font-medium text-base h-12 px-6 mb-12"
+          >
+            애널리틱스 대시보드 보기
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </Link>
+        </div>
+
         <Image
           className="dark:invert"
           src="/next.svg"
